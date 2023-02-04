@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Медитация</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/app.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Медитация</title>
 
-    <!-- Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/app.css" />
 
-    <!-- JS -->
-    <script src="js/app.js" defer></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="logo">
-        <img src="img/logo.png" alt="Logo" />
-        <h1>Таймер для медитации</h1>
-      </div>
-      <form class="timer">
-        <div class="info">
-          Установить медитацию на
-          <input
-            type="number"
-            name="time"
-            aria-label="Число минут для медитации"
-            value="10"
-          />
-          минут
-        </div>
-        <div class="countdown">
-          <div class="num" id="min_tens">0</div>
-          <div class="num" id="min">0</div>
-          <div class="dots">:</div>
-          <div class="num" id="sec_tens">0</div>
-          <div class="num" id="sec">0</div>
-        </div>
-        <button type="submit" class="btn">
-          <img src="img/play.png" alt="Play" />
-          Запустить таймер
-        </button>
-      </form>
+  <!-- Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- JS -->
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo" />
+      <h1>Таймер для медитации</h1>
     </div>
-  </body>
+    <form class="timer" onsubmit="app.submit(event)">
+      <div class="info">
+        Установить медитацию на
+        <input type="number" name="time" aria-label="Число минут для медитации" value="10" />
+        минут
+      </div>
+      <div class="countdown">
+        <div class="num" id="min_tens">0</div>
+        <div class="num" id="min">0</div>
+        <div class="dots">:</div>
+        <div class="num" id="sec_tens">0</div>
+        <div class="num" id="sec">0</div>
+      </div>
+      <button type="submit" class="btn">
+        <img src="img/play.png" alt="Play" />
+        Запустить таймер
+      </button>
+  </div>
+</body>
+
 </html>
